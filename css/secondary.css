@@ -1,0 +1,201 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado y Navegación */
+.navbar {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ff9a9e;
+}
+
+/* Botón de menú hamburguesa */
+.hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Oculta el menú en pantallas pequeñas */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #1e1e1e;
+        padding: 1rem;
+    }
+
+    .navbar ul.active {
+        display: flex; /* Muestra el menú al activar */
+    }
+
+    .hamburger-menu {
+        display: block; /* Muestra el ícono del menú hamburguesa */
+    }
+}
+
+/* Título de la sección */
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Contenedor de tarjetas de categoría */
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Tarjeta individual */
+.category-card {
+    background-color: white;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.category-card-content {
+    padding: 15px;
+}
+
+.category-card-title {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.category-card-text {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.category-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ff9a9e;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.category-card a:hover {
+    color: #ff6060;
+}
+
+/* Estilo general para el margen lateral */
+main {
+    padding: 0 20px;
+    max-width: 1200px; /* Ancho máximo para una mejor lectura */
+    margin: 0 auto; /* Centrar el contenido */
+}
+
+.detail-content {
+    margin: 20px;
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.section-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    flex: 1;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .info-container {
+        flex-direction: column;
+    }
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 0.9em;
+}
+
+/* Contenido de la sección */
+.content-section {
+    max-width: 800px; /* Ajusta según el diseño */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.responsive-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+}
