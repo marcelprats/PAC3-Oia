@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero {
+  color: #fff;
+  text-align: center;
+  background-image: url("oia-hero.b727227b.jpg");
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.navbar {
+  align-items: center;
+  gap: 30px;
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.navbar ul {
+  gap: 20px;
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5rem;
+  display: none;
+}
+
+@media (width <= 768px) {
+  .navbar ul {
+    background-color: #333;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+.logo {
+  color: #000;
+  font-family: Playfair Display, serif;
+  font-size: 1.8em;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1, .hero-content p {
+  color: #000;
+  text-shadow: -1px -1px #fff, 1px -1px #fff, -1px 1px #fff, 1px 1px #fff;
+}
+
+.hero-content h2 {
+  color: #fff;
+  text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
+}
+
+.scroll-button {
+  color: #fff;
+  background-color: #ff9a9e;
+  border-radius: 5px;
+  padding: 12px 24px;
+  font-size: 1.2em;
+  text-decoration: none;
+  position: relative;
+  top: 40px;
+}
+
+.section {
+  padding: 80px 20px;
+}
+
+.section-content {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+.section-content:nth-child(2n) .section-image {
+  order: 2;
+}
+
+.section-image {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.section-text {
+  width: 45%;
+}
+
+.section-link {
+  color: #000;
+  text-decoration: none;
+  display: block;
+}
+
+.reveal {
+  opacity: 0;
+  transition: opacity .6s ease-out, transform .6s ease-out, -webkit-transform .6s ease-out;
+  transform: translateY(50px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/*# sourceMappingURL=index.c92073ef.css.map */

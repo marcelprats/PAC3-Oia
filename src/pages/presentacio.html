@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación - Descobreix Oia</title>
+    <link rel="stylesheet" href="../css/secondary.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1 class="logo">Descobreix Oia</h1>
+        <span class="hamburger-menu">&#9776;</span>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="presentacio.html">Presentación</a></li>
+                <li><a href="categoria.html">Historia</a></li>
+                <li><a href="detall.html">Castillo</a></li>
+                <li><a href="enllacos.html">Enlaces</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Presentación</h2>
+        
+        <div class="content-section" style="max-width: 800px; margin: 0 auto;">
+            <p><strong>Historia de Oia:</strong> En esta sección, exploramos historia de Oia. <a href="categoria.html">Historia de Oia</a> también muestra un mapa con tres puntos de interés.</p>
+            
+            <!-- Imagen ajustada al ancho del texto -->
+            <div class="media">
+                <img src="../assets/images/sunset.jpg" alt="Atardecer en Oia" class="responsive-image">
+            </div>
+
+            <p><strong>Castillo:</strong> Muestra información acerca del <a href="detall.html">castillo de Oia</a>.</p>
+
+            <p><strong>Enlaces</strong> En <a href="enllacos.html">enlaces</a> hay la documentación de las fuentes de información consultadas.</p>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Descobreix Oia. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.navbar ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
