@@ -11,7 +11,7 @@
   "description": "",
   "devDependencies": {
     "autoprefixer": "^10.4.20",
-    "parcel": "^2.13.0",
+    "parcel": "^2.13.3",
     "postcss": "^8.4.49"
   },
   "dependencies": {
