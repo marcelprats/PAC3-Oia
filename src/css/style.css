@@ -1,3 +1,13 @@
+/* Animació de botons i enllaços */
+a, button {
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transició suau */
+}
+
+a:hover, button:hover {
+    color: #000000; /* Canvi de color en hover */
+}
+
+
 /* General */
 * {
     margin: 0;
@@ -68,6 +78,12 @@ html {
     color: #fff;
     text-decoration: none;
 }
+
+.navbar ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
 
 .hamburger-menu {
     display: none;
@@ -183,3 +199,30 @@ html {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+
+.svg-stars-container {
+    display: flex;
+    justify-content: space-around; /* Distribueix uniformement */
+    align-items: center; /* Centra verticalment */
+    margin: 20px auto;
+    max-width: 800px; /* Amplada màxima del contenidor */
+    gap: 20px; /* Espai entre estrelles */
+}
+
+.rotating-star {
+    width: 100px; /* Amplada inicial */
+    height: 100px; /* Altura inicial */
+    animation: rotate 3s linear infinite; /* Animació rotatòria */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
