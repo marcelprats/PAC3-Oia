@@ -199,3 +199,80 @@ main {
     margin: 20px 0;
     border-radius: 8px;
 }
+
+
+.highlight-image img {
+    width: 220px; /* Tamaño inicial de las estrellas */
+    height: 220px; /* Altura inicial de las estrellas */
+    max-width: 100%; /* Permite que se reduzcan proporcionalmente */
+    max-height: 100%; /* Asegura que mantengan la proporción */
+    clip-path: polygon(
+        50% 0%,    /* Punta superior */
+        61.8% 38.2%, /* Superior derecho externo */
+        100% 38.2%, /* Extremo derecho */
+        69.1% 61.8%, /* Derecho interno */
+        80.9% 100%, /* Inferior derecho */
+        50% 76.4%,  /* Centro inferior */
+        19.1% 100%, /* Inferior izquierdo */
+        30.9% 61.8%, /* Izquierdo interno */
+        0% 38.2%,    /* Extremo izquierdo */
+        38.2% 38.2%  /* Superior izquierdo externo */
+    );
+    object-fit: cover; /* Ajusta la imagen sin deformarse */
+    margin: 0 20px; /* Espacio lateral */
+    border: 3px solid #007ACC;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.stars-container {
+    display: flex;
+    justify-content: space-around; /* Distribueix les estrelles uniformement */
+    align-items: center; /* Centra verticalment les imatges */
+    margin: 20px auto;
+    max-width: 800px; /* Amplada màxima del contenidor */
+    gap: 30px; /* Separació extra entre les estrelles */
+}
+
+@media (max-width: 875px) {
+    .highlight-image img {
+        width: 150px; /* Se reducen a 150px en pantallas pequeñas */
+        height: 150px; /* Mantienen la proporción */
+    }
+}
+
+@media (max-width: 580px) {
+    .highlight-image img {
+        width: 125px; /* Se reducen aún más*/
+        height: 125px; /* Mantienen la proporción */
+    }
+    .stars-container {
+        margin: 15px auto;
+        gap: 20px; /* Separació extra entre les estrelles */
+    }
+}
+
+@media (max-width: 480px) {
+    .highlight-image img {
+        width: 50px; /* Se reducen aún más */
+        height: 50px; /* Mantienen la proporción */
+    }
+    .stars-container {
+        margin: 10px auto;
+        gap: 15px; /* Separació extra entre les estrelles */
+    }
+}
+
+@media (max-width: 280px) {
+    .highlight-image img {
+        width: 20px; /* Se reducen aún más */
+        height: 20px; /* Mantienen la proporción */
+    }
+    .stars-container {
+        margin: 1px auto;
+        gap: 1px; /* Separació extra entre les estrelles */
+    }
+}
