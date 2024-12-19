@@ -6,7 +6,7 @@
     <title>Descobreix Oia, Santorini</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body>  
     <header class="hero">
         <div class="navbar">
             <h1 class="logo">Descubre Oia</h1>
@@ -25,7 +25,15 @@
             <h2>Un viaje inolvidable al corazón de Santorini</h2>
             <a href="#presentacion" class="scroll-button">Explorar Más</a>
         </div>
+        <!-- Imatges responsive per al fons -->
+        <picture>
+            <source srcset="./assets/images/oia-hero.jpg" media="(min-width: 1200px)">
+            <source srcset="./assets/images/oia-hero-1200.jpg" media="(min-width: 768px)">
+            <img src="./assets/images/oia-hero-m.jpg" alt="Vista panorámica de Oia" class="hero-image">
+        </picture>
     </header>
+    
+    
 
     <section id="presentacion" class="section reveal">
         <div class="section-content reverse">

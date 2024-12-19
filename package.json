@@ -1,5 +1,5 @@
 {
-  "name": "descobreix-oia",
+  "name": "pac2-oia",
   "version": "1.0.0",
   "scripts": {
     "dev": "parcel src/index.html",

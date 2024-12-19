@@ -11,18 +11,32 @@ html {
 
 /* Hero Section */
 .hero {
-    background-image: url('../assets/images/oia-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    text-align: center;
     position: relative;
+    text-align: center;
+    color: white;
+    height: 100vh; /* Ocupa tota l'alçada de la finestra */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
+
+.hero picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Per situar la imatge darrere del contingut */
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imatge al contenidor sense deformar */
+}
+
 
 .navbar {
     position: absolute;
