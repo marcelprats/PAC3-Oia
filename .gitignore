@@ -1,0 +1,14 @@
+# Node.js
+node_modules/
+.parcel-cache/
+
+# Parcel output
+dist/
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
