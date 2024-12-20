@@ -114,8 +114,6 @@ html {
     }
 }
 
-
-
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 1.8em;
@@ -225,15 +223,20 @@ html {
 }
 
 .logo-img {
-    width: 200px; /* Ajusta la mida segons necessitats */
-    height: auto; /* Manté la proporció */
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    max-height: 100px;
+    object-fit: contain;
 }
 
-.logo-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8em;
-    color: white;
+@media (max-width: 768px) {
+    .logo-img {
+        max-width: 150px; /* Reduce el tamaño máximo para pantallas pequeñas */
+        max-height: 75px;
+    }
 }
+
 
 @keyframes rotate {
     from {
