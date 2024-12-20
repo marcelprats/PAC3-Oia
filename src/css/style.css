@@ -214,8 +214,11 @@ html {
 .rotating-star {
     width: 100px; /* Amplada inicial */
     height: 100px; /* Altura inicial */
-    animation: rotate 3s linear infinite; /* Animació rotatòria */
+    transform-origin: center; /* Punt de rotació al centre */
 }
+
+
+
 
 @keyframes rotate {
     from {
