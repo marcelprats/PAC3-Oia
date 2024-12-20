@@ -2,8 +2,7 @@
   "name": "pac2-oia",
   "version": "1.0.0",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html --dist-dir docs"
   },
   "keywords": [],
   "author": "",
