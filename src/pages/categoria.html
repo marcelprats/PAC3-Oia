@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="navbar">
-        <h1 class="logo">Descubre Oia</h1>
+        <img src="../assets/images/descubre-oia.png" alt="Logo Descubre Oia" class="logo-img">
         <span class="hamburger-menu">&#9776;</span>
         <nav>
             <ul>
@@ -40,10 +40,10 @@
                     <img src="../assets/images/architecture.jpg" alt="Arquitectura d'Oia">
                 </div>
                 <div class="highlight-image">
-                    <img src="../assets/images/castillo-oia-m.jpg" alt="Arquitectura d'Oia">
+                    <img src="../assets/images/castillo-oia-1200.jpg" alt="Arquitectura d'Oia">
                 </div>
                 <div class="highlight-image">
-                    <img src="../assets/images/oia-paisaje-1200.jpg" alt="Arquitectura d'Oia">
+                    <img src="../assets/images/oia-paisaje.jpg" alt="Arquitectura d'Oia">
                 </div>
              </div>
             
@@ -87,6 +87,37 @@
     <script>
         document.querySelector('.hamburger-menu').addEventListener('click', function() {
             document.querySelector('.navbar ul').classList.toggle('active');
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const stars = document.querySelectorAll(".highlight-image img");
+
+            stars.forEach((star) => {
+                // Crea el recuadre popup
+                const popupRectangle = document.createElement("div");
+                popupRectangle.classList.add("popup-rectangle");
+                popupRectangle.style.backgroundImage = `url(${star.src})`; // Assigna la mateixa imatge de l'estrella
+                document.body.appendChild(popupRectangle);
+
+                // Funció per mostrar el recuadre
+                const showPopup = () => {
+                    star.classList.add("hidden"); // Amaga l'estrella
+                    popupRectangle.classList.add("visible"); // Mostra el recuadre
+                };
+
+                // Funció per ocultar el recuadre
+                const hidePopup = () => {
+                    star.classList.remove("hidden"); // Torna a mostrar l'estrella
+                    popupRectangle.classList.remove("visible"); // Oculta el recuadre
+                };
+
+                // Esdeveniment per mostrar el recuadre quan el ratolí entra a l'estrella
+                star.addEventListener("mouseover", showPopup);
+
+                // Esdeveniments per ocultar el recuadre quan el ratolí surt del recuadre
+                popupRectangle.addEventListener("mouseleave", hidePopup);
+            });
         });
     </script>
 </body>
