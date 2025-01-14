@@ -6,6 +6,9 @@
     <title>Historia de Oia</title>
     <link rel="stylesheet" href="../css/secondary.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="../js/mapa.js" defer></script>
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/stars.js" defer></script>
 </head>
 <body>
     <header class="navbar">
@@ -25,7 +28,7 @@
     <main>
         <h2 class="section-title">Historia</h2>
         
-        <div class="cat egory-content">
+        <div class="category-content">
             <p><strong>Oia</strong>, ubicada en la isla de Santorini, es un destino lleno de historia y belleza natural. Sus orígenes se remontan a épocas antiguas, y ha sido un importante asentamiento a lo largo de los siglos debido a su posición estratégica en el mar Egeo. Con sus pintorescas casas blancas y sus cúpulas azules, Oia se ha convertido en un símbolo de la cultura griega y un lugar imprescindible para los viajeros que buscan paisajes únicos y una atmósfera auténtica.</p>
             
             <p>Con el tiempo, Oia ha visto el crecimiento de un patrimonio cultural impresionante, reflejado en su arquitectura y en la preservación de sitios históricos. La ciudad fue parcialmente destruida por un terremoto en 1956, pero ha sido reconstruida y restaurada con esmero, respetando su estilo original. Hoy en día, Oia es conocida por su vibrante comunidad artística, su gastronomía y, por supuesto, por sus espectaculares vistas al atardecer.</p>
@@ -57,68 +60,6 @@
     <footer class="footer">
         <p>&copy; 2024 Descubre Oia</p>
     </footer>
-    
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Inicializa el mapa centrado en Oia, Santorini
-            const map = L.map('map').setView([36.4613, 25.3758], 15);
-    
-            // Añade el mapa de OpenStreetMap como fondo
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-    
-            // Lista de puntos de interés en Oia
-            const pointsOfInterest = [
-                { name: "Castillo de Oia", coords: [36.4625, 25.3724], description: "Famoso por sus vistas al atardecer.", link: "detall.html" },
-                { name: "Iglesia de Cúpula Azul", coords: [36.4618, 25.3758], description: "Ícono de Santorini.", link: "detall.html" },
-                { name: "Museo Naval de Oia", coords: [36.4632, 25.3779], description: "Exhibe la historia marítima de Santorini.", link: "detall.html" }
-            ];
-
-            // Agrega un marcador y popup para cada punto de interés
-            pointsOfInterest.forEach(point => {
-                L.marker(point.coords)
-                    .addTo(map)
-                    .bindPopup(`<b>${point.name}</b><br>${point.description}<br><a href="${point.link}">Leer más</a>`);
-            });
-        });
-    </script>
-    <script>
-        document.querySelector('.hamburger-menu').addEventListener('click', function() {
-            document.querySelector('.navbar ul').classList.toggle('active');
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const stars = document.querySelectorAll(".highlight-image img");
-
-            stars.forEach((star) => {
-                // Crea el recuadre popup
-                const popupRectangle = document.createElement("div");
-                popupRectangle.classList.add("popup-rectangle");
-                popupRectangle.style.backgroundImage = `url(${star.src})`; // Assigna la mateixa imatge de l'estrella
-                document.body.appendChild(popupRectangle);
-
-                // Funció per mostrar el recuadre
-                const showPopup = () => {
-                    star.classList.add("hidden"); // Amaga l'estrella
-                    popupRectangle.classList.add("visible"); // Mostra el recuadre
-                };
-
-                // Funció per ocultar el recuadre
-                const hidePopup = () => {
-                    star.classList.remove("hidden"); // Torna a mostrar l'estrella
-                    popupRectangle.classList.remove("visible"); // Oculta el recuadre
-                };
-
-                // Esdeveniment per mostrar el recuadre quan el ratolí entra a l'estrella
-                star.addEventListener("mouseover", showPopup);
-
-                // Esdeveniments per ocultar el recuadre quan el ratolí surt del recuadre
-                popupRectangle.addEventListener("mouseleave", hidePopup);
-            });
-        });
-    </script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
 </body>
 </html>
